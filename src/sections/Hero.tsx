@@ -125,30 +125,10 @@ export function Hero() {
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.2, duration: 0.7 }}
         >
-          <span className="micro-label">Neo Pure · Est. 2014</span>
+          <span className="micro-label">NeoPure · Est. 2014</span>
           <span className="hidden items-center gap-3 md:flex">
             <span className="h-1 w-1 rounded-full bg-bone-100" />
             <span className="micro-label !text-bone-100/60">Москва · Санкт-Петербург</span>
-          </span>
-        </motion.div>
-
-        <motion.div
-          initial={{ opacity: 0, y: 16 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ delay: 0.45, duration: 0.7 }}
-          className="container-edge absolute inset-x-0 top-44 z-10 hidden gap-3 md:flex"
-        >
-          <span className="glass-pill inline-flex items-center gap-2 rounded-full px-4 py-2 text-[10px] uppercase tracking-[0.25em] text-bone-50/90">
-            <Leaf className="h-3.5 w-3.5" />
-            Живая система
-          </span>
-          <span className="glass-pill inline-flex items-center gap-2 rounded-full px-4 py-2 text-[10px] uppercase tracking-[0.25em] text-bone-50/90">
-            <Sparkles className="h-3.5 w-3.5" />
-            Studio grade
-          </span>
-          <span className="glass-pill inline-flex items-center gap-2 rounded-full px-4 py-2 text-[10px] uppercase tracking-[0.25em] text-bone-50/90">
-            <ShieldCheck className="h-3.5 w-3.5" />
-            Гарантия качества
           </span>
         </motion.div>
 
