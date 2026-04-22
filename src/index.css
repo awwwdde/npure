@@ -1,0 +1,149 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  color-scheme: dark;
+}
+
+html {
+  scroll-behavior: smooth;
+  background: #0A0A0A;
+}
+
+body {
+  background: #0A0A0A;
+  font-feature-settings: 'ss01', 'cv11';
+}
+
+::selection {
+  background: #C9A85C;
+  color: #0A0A0A;
+}
+
+::-webkit-scrollbar { width: 8px; height: 8px; }
+::-webkit-scrollbar-track { background: #0A0A0A; }
+::-webkit-scrollbar-thumb { background: #1A1A18; }
+::-webkit-scrollbar-thumb:hover { background: #C9A85C; }
+
+@layer components {
+  .container-edge {
+    @apply mx-auto w-full max-w-[1480px] px-6 md:px-10 lg:px-16;
+  }
+
+  .micro-label {
+    @apply inline-block text-[10px] font-medium uppercase tracking-[0.38em] text-bone-100/55;
+  }
+
+  .display {
+    @apply font-display font-light leading-[0.92] tracking-[-0.035em];
+  }
+
+  .btn-primary {
+    @apply inline-flex items-center gap-2.5 rounded-full border border-bone-100 bg-bone-100 px-7 py-3.5 text-xs font-medium uppercase tracking-[0.22em] text-ink-900 transition-colors duration-300 hover:bg-transparent hover:text-bone-100;
+  }
+
+  .btn-outline {
+    @apply inline-flex items-center gap-2.5 rounded-full border border-bone-100/30 px-7 py-3.5 text-xs font-medium uppercase tracking-[0.22em] text-bone-100 transition-colors duration-300 hover:border-bone-100 hover:bg-bone-100 hover:text-ink-900;
+  }
+
+  .hairline {
+    @apply h-px bg-bone-100/10;
+  }
+
+  .link-underline {
+    position: relative;
+  }
+  .link-underline::after {
+    content: '';
+    position: absolute;
+    inset-inline: 0;
+    bottom: -2px;
+    height: 1px;
+    background: currentColor;
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: transform 0.4s ease;
+  }
+  .link-underline:hover::after { transform: scaleX(1); }
+}
+
+/* Cinematic film grade for the hero layers */
+.cinema {
+  filter: saturate(1.08) contrast(1.08) brightness(0.94);
+}
+
+/* Vignette overlay */
+.vignette {
+  background: radial-gradient(ellipse at center, transparent 35%, rgba(0, 0, 0, 0.65) 100%);
+}
+
+/* Soft bloom highlight */
+.bloom {
+  background: radial-gradient(ellipse 60% 45% at 50% 40%, rgba(255, 220, 180, 0.18), transparent 70%);
+  mix-blend-mode: screen;
+}
+
+/* Falling petals — staggered via delay per element */
+.petal {
+  position: absolute;
+  width: 12px;
+  height: 14px;
+  border-radius: 60% 40% 60% 40% / 50% 60% 40% 50%;
+  background: linear-gradient(135deg, #ffb7c5 0%, #f48fb1 60%, #ec4899 100%);
+  box-shadow: 0 0 10px rgba(255, 183, 197, 0.3);
+  opacity: 0;
+  top: -10%;
+  will-change: transform, opacity;
+  animation: petal-fall linear infinite;
+  pointer-events: none;
+}
+.petal--sm { width: 7px; height: 9px; opacity: 0.6; }
+.petal--lg { width: 16px; height: 19px; }
+
+@keyframes petal-fall {
+  0% {
+    transform: translate3d(0, -10vh, 0) rotate(0deg);
+    opacity: 0;
+  }
+  8% { opacity: 0.9; }
+  50% {
+    transform: translate3d(40px, 55vh, 0) rotate(240deg);
+    opacity: 0.85;
+  }
+  100% {
+    transform: translate3d(-30px, 115vh, 0) rotate(540deg);
+    opacity: 0;
+  }
+}
+
+/* Breathing ambient accents for premium UI details */
+.breathe {
+  animation: breathe 4.6s ease-in-out infinite;
+}
+
+.breathe-slow {
+  animation: breathe 7.4s ease-in-out infinite;
+}
+
+.glass-pill {
+  backdrop-filter: blur(8px);
+  background: linear-gradient(135deg, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0.03));
+  border: 1px solid rgba(255, 255, 255, 0.16);
+}
+
+.ambient-orb {
+  background: radial-gradient(circle at center, rgba(201, 168, 92, 0.26), transparent 65%);
+}
+
+@keyframes breathe {
+  0%,
+  100% {
+    transform: scale(1);
+    opacity: 0.68;
+  }
+  50% {
+    transform: scale(1.08);
+    opacity: 1;
+  }
+}

@@ -1,0 +1,25 @@
+<svg width="1600" height="1100" viewBox="0 0 1600 1100" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1600" y2="1100" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#1B1A17"/>
+      <stop offset="0.5" stop-color="#23211C"/>
+      <stop offset="1" stop-color="#121210"/>
+    </linearGradient>
+    <radialGradient id="glow" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(800 450) rotate(90) scale(380 620)">
+      <stop stop-color="#C9A85C" stop-opacity="0.42"/>
+      <stop offset="1" stop-color="#C9A85C" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+  <rect width="1600" height="1100" fill="url(#bg)"/>
+  <rect width="1600" height="1100" fill="url(#glow)"/>
+  <g opacity="0.2">
+    <rect x="180" y="190" width="1240" height="720" rx="20" stroke="#F3EDE1"/>
+    <rect x="210" y="220" width="1180" height="660" rx="14" stroke="#F3EDE1"/>
+  </g>
+  <g fill="#F3EDE1" opacity="0.78">
+    <circle cx="800" cy="500" r="48"/>
+    <path d="M715 630h170v20H715z"/>
+  </g>
+  <text x="800" y="765" text-anchor="middle" fill="#F3EDE1" opacity="0.86" font-family="Inter, Arial, sans-serif" font-size="36" letter-spacing="8">MEDIA PLACEHOLDER</text>
+  <text x="800" y="810" text-anchor="middle" fill="#F3EDE1" opacity="0.5" font-family="Inter, Arial, sans-serif" font-size="18" letter-spacing="4">NPURE</text>
+</svg>

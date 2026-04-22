@@ -1,0 +1,94 @@
+import { motion } from 'framer-motion';
+import videoBg from '../content/npure.mp4';
+
+const CARDS = [
+  {
+    title: 'Индивидуальный',
+    price: 'от 7 000 ₽',
+    body: 'Лично с мастером · 2 часа · любой размер.',
+    image: '/media-placeholder.svg',
+  },
+  {
+    title: 'Для компании',
+    price: 'от 4 500 ₽ / чел',
+    body: 'От 6 до 40 человек · в офисе или в студии.',
+    image: '/media-placeholder.svg',
+  },
+  {
+    title: 'Детский',
+    price: 'от 3 900 ₽',
+    body: 'Для гостей 7–14 лет · день рождения · выпускной.',
+    image: '/media-placeholder.svg',
+  },
+];
+
+export function Workshops() {
+  return (
+    <section id="workshops" className="relative bg-ink-900 py-28 md:py-40">
+      <div className="container-edge">
+        <div className="grid gap-10 lg:grid-cols-[1fr_1fr] lg:items-end">
+          <div>
+            <span className="micro-label">№ 09 — Мастер-классы</span>
+            <h2 className="display mt-8 text-4xl text-bone-50 md:text-6xl">
+              Соберите
+              <br />
+              <span className="italic">свой мир.</span>
+            </h2>
+          </div>
+          <p className="max-w-md text-[15px] leading-[1.8] text-bone-100/70">
+            Два часа, ваши руки, наши материалы. Уходите с готовым флорариумом
+            и навыком, который останется с вами.
+          </p>
+        </div>
+
+        <motion.div
+          initial={{ opacity: 0, y: 18 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true, margin: '-80px' }}
+          transition={{ duration: 0.8 }}
+          className="mt-16 relative aspect-[16/7] overflow-hidden"
+        >
+          <video
+            className="h-full w-full object-cover"
+            src={videoBg}
+            autoPlay
+            muted
+            loop
+            playsInline
+            preload="metadata"
+          />
+          <div className="pointer-events-none absolute inset-0 bg-gradient-to-r from-ink-900/45 via-transparent to-ink-900/35" />
+        </motion.div>
+
+        <div className="mt-20 grid gap-x-8 gap-y-12 md:grid-cols-3">
+          {CARDS.map((c, i) => (
+            <motion.div
+              key={c.title}
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true, margin: '-60px' }}
+              transition={{ duration: 0.7, delay: i * 0.08 }}
+              className="border-t border-bone-100/10 pt-8"
+            >
+              <div className="mb-6 aspect-[4/3] overflow-hidden">
+                <img
+                  src={c.image}
+                  alt={c.title}
+                  loading="lazy"
+                  className="h-full w-full object-cover transition-transform duration-[1200ms] hover:scale-105"
+                />
+              </div>
+              <h3 className="font-display text-3xl text-bone-50">{c.title}</h3>
+              <p className="mt-3 text-[14px] leading-relaxed text-bone-100/65">{c.body}</p>
+              <div className="mt-10 font-display text-xl text-bone-50">{c.price}</div>
+            </motion.div>
+          ))}
+        </div>
+
+        <div className="mt-16 flex justify-start">
+          <a href="/contacts" className="btn-outline">Записаться</a>
+        </div>
+      </div>
+    </section>
+  );
+}
