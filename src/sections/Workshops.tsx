@@ -6,19 +6,19 @@ const CARDS = [
     title: 'Индивидуальный',
     price: 'от 7 000 ₽',
     body: 'Лично с мастером · 2 часа · любой размер.',
-    image: '/media-placeholder.svg',
+    image: 'https://images.unsplash.com/photo-1501004318641-b39e6451bec6?auto=format&fit=crop&w=1200&q=85',
   },
   {
     title: 'Для компании',
     price: 'от 4 500 ₽ / чел',
     body: 'От 6 до 40 человек · в офисе или в студии.',
-    image: '/media-placeholder.svg',
+    image: 'https://images.unsplash.com/photo-1511795409834-432f7d7a6b8b?auto=format&fit=crop&w=1200&q=85',
   },
   {
     title: 'Детский',
     price: 'от 3 900 ₽',
     body: 'Для гостей 7–14 лет · день рождения · выпускной.',
-    image: '/media-placeholder.svg',
+    image: 'https://images.unsplash.com/photo-1503676260728-1c00da094a0b?auto=format&fit=crop&w=1200&q=85',
   },
 ];
 

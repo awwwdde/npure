@@ -62,13 +62,13 @@ export function FAQ() {
             </div>
             <div className="grid grid-cols-2 gap-4">
               <img
-                src="/media-placeholder.svg"
+                src="https://images.unsplash.com/photo-1485955900006-10f4d324d411?auto=format&fit=crop&w=1000&q=85"
                 alt="Флорариум в интерьере"
                 loading="lazy"
                 className="aspect-[4/5] w-full object-cover"
               />
               <img
-                src="/media-placeholder.svg"
+                src="https://images.unsplash.com/photo-1459411552884-841db9b3cc2a?auto=format&fit=crop&w=1000&q=85"
                 alt="Детали композиции"
                 loading="lazy"
                 className="aspect-[4/5] w-full object-cover"

@@ -1,12 +1,14 @@
 import { AnimatePresence, motion } from 'framer-motion';
 import Lenis from 'lenis';
-import { useEffect } from 'react';
+import { useEffect, useRef } from 'react';
 import { Outlet, useLocation } from 'react-router-dom';
 import { Header } from '../components/Header';
+import { CookieConsent } from '../components/CookieConsent';
 import { Footer } from '../sections/Footer';
 
 export function SiteLayout() {
   const { pathname } = useLocation();
+  const lenisRef = useRef<Lenis | null>(null);
 
   useEffect(() => {
     const reduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
@@ -19,6 +21,7 @@ export function SiteLayout() {
       touchMultiplier: 1.2,
       wheelMultiplier: 0.95,
     });
+    lenisRef.current = lenis;
 
     let rafId = 0;
     const raf = (time: number) => {
@@ -29,12 +32,16 @@ export function SiteLayout() {
     rafId = window.requestAnimationFrame(raf);
     return () => {
       window.cancelAnimationFrame(rafId);
+      lenisRef.current = null;
       lenis.destroy();
     };
   }, []);
 
   useEffect(() => {
-    window.scrollTo({ top: 0, behavior: 'instant' as ScrollBehavior });
+    lenisRef.current?.scrollTo(0, { immediate: true });
+    window.scrollTo(0, 0);
+    document.documentElement.scrollTop = 0;
+    document.body.scrollTop = 0;
   }, [pathname]);
 
   return (
@@ -54,6 +61,7 @@ export function SiteLayout() {
         </AnimatePresence>
       </main>
       <Footer />
+      <CookieConsent />
     </div>
   );
 }

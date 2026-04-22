@@ -1,14 +1,14 @@
 import { motion } from 'framer-motion';
 
 const IMAGES = [
-  '/media-placeholder.svg',
-  '/media-placeholder.svg',
-  '/media-placeholder.svg',
-  '/media-placeholder.svg',
-  '/media-placeholder.svg',
-  '/media-placeholder.svg',
-  '/media-placeholder.svg',
-  '/media-placeholder.svg',
+  'https://images.unsplash.com/photo-1466692476868-aef1dfb1e735?auto=format&fit=crop&w=1400&q=85',
+  'https://images.unsplash.com/photo-1459411552884-841db9b3cc2a?auto=format&fit=crop&w=1400&q=85',
+  'https://images.unsplash.com/photo-1485955900006-10f4d324d411?auto=format&fit=crop&w=1400&q=85',
+  'https://images.unsplash.com/photo-1502672023488-70e25813eb80?auto=format&fit=crop&w=1400&q=85',
+  'https://images.unsplash.com/photo-1509937528035-ad76254b0356?auto=format&fit=crop&w=1400&q=85',
+  'https://images.unsplash.com/photo-1509223197845-458d87318791?auto=format&fit=crop&w=1400&q=85',
+  'https://images.unsplash.com/photo-1501004318641-b39e6451bec6?auto=format&fit=crop&w=1400&q=85',
+  'https://images.unsplash.com/photo-1494972308805-463bc619d34e?auto=format&fit=crop&w=1400&q=85',
 ];
 
 export function Gallery({ full = false }: { full?: boolean }) {

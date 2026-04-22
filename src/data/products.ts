@@ -10,7 +10,7 @@ export type Product = {
   badge?: string;
 };
 
-const PLACEHOLDER = '/media-placeholder.svg';
+const PLACEHOLDER = 'https://images.unsplash.com/photo-1466692476868-aef1dfb1e735?auto=format&fit=crop&w=1200&q=80';
 
 export const products: Product[] = [
   {

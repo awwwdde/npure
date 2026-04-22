@@ -6,14 +6,14 @@ const STUDIOS = [
     address: 'Садовая-Кудринская, 20',
     metro: 'м. Баррикадная',
     hours: 'Пн–Вс · 11:00 — 21:00',
-    image: '/media-placeholder.svg',
+    image: 'https://images.unsplash.com/photo-1520637836862-4d197d17c55a?auto=format&fit=crop&w=1600&q=85',
   },
   {
     city: 'Санкт-Петербург',
     address: 'Гороховая, 16/71',
     metro: 'м. Адмиралтейская',
     hours: 'Пн–Вс · 11:00 — 21:00',
-    image: '/media-placeholder.svg',
+    image: 'https://images.unsplash.com/photo-1549144511-f099e773c147?auto=format&fit=crop&w=1600&q=85',
   },
 ];
 

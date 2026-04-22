@@ -7,28 +7,28 @@ const STEPS = [
     title: 'Заявка',
     body: 'Оставляете заявку — консультант свяжется в течение 15 минут.',
     icon: ClipboardCheck,
-    image: '/media-placeholder.svg',
+    image: 'https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?auto=format&fit=crop&w=1200&q=85',
   },
   {
     n: '02',
     title: 'Детали',
     body: 'Согласуем размер, растения, подсветку, адрес и дату.',
     icon: MessagesSquare,
-    image: '/media-placeholder.svg',
+    image: 'https://images.unsplash.com/photo-1552664730-d307ca884978?auto=format&fit=crop&w=1200&q=85',
   },
   {
     n: '03',
     title: 'Сборка',
     body: 'Мастера собирают флорариум вручную за 5–7 дней.',
     icon: Sparkles,
-    image: '/media-placeholder.svg',
+    image: 'https://images.unsplash.com/photo-1463320726281-696a485928c7?auto=format&fit=crop&w=1200&q=85',
   },
   {
     n: '04',
     title: 'Доставка',
     body: 'Привозим в идеальной упаковке. Оплата при получении.',
     icon: Truck,
-    image: '/media-placeholder.svg',
+    image: 'https://images.unsplash.com/photo-1601599963565-b7f5b8f89f60?auto=format&fit=crop&w=1200&q=85',
   },
 ];
 

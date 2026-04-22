@@ -16,7 +16,7 @@ export function Story() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, margin: '-100px' }}
           transition={{ duration: 1, ease: [0.22, 1, 0.36, 1] }}
-          src="/media-placeholder.svg"
+          src="https://images.unsplash.com/photo-1466692476868-aef1dfb1e735?auto=format&fit=crop&w=1600&q=85"
           alt="Florarium close-up"
           className="aspect-[4/5] w-full object-cover"
         />

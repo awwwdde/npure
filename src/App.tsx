@@ -7,6 +7,7 @@ import WorkshopsPage from './pages/WorkshopsPage';
 import GalleryPage from './pages/GalleryPage';
 import AboutPage from './pages/AboutPage';
 import ContactsPage from './pages/ContactsPage';
+import PrivacyPage from './pages/PrivacyPage';
 
 export default function App() {
   return (
@@ -20,6 +21,7 @@ export default function App() {
           <Route path="/gallery" element={<GalleryPage />} />
           <Route path="/about" element={<AboutPage />} />
           <Route path="/contacts" element={<ContactsPage />} />
+          <Route path="/privacy" element={<PrivacyPage />} />
           <Route path="*" element={<HomePage />} />
         </Route>
       </Routes>

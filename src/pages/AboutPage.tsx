@@ -4,9 +4,9 @@ import { Story } from '../sections/Story';
 import { Components } from '../sections/Components';
 
 const TEAM = [
-  { name: 'Елена Ивлева', role: 'Основатель · главный флорист', img: '/media-placeholder.svg' },
-  { name: 'Артём Соколов', role: 'Дизайн и архитектура', img: '/media-placeholder.svg' },
-  { name: 'Мария Климова', role: 'Ботаника · микология', img: '/media-placeholder.svg' },
+  { name: 'Елена Ивлева', role: 'Основатель · главный флорист', img: 'https://images.unsplash.com/photo-1544005313-94ddf0286df2?auto=format&fit=crop&w=900&q=85' },
+  { name: 'Артём Соколов', role: 'Дизайн и архитектура', img: 'https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&w=900&q=85' },
+  { name: 'Мария Климова', role: 'Ботаника · микология', img: 'https://images.unsplash.com/photo-1487412720507-e7ab37603c6f?auto=format&fit=crop&w=900&q=85' },
 ];
 
 export default function AboutPage() {

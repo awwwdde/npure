@@ -1,5 +1,5 @@
 import { Link } from 'react-router-dom';
-import { Globe, MessageCircle, Send, ShieldCheck } from 'lucide-react';
+import { Globe, MessageCircle, Send } from 'lucide-react';
 
 const LINKS = [
   {
@@ -42,10 +42,6 @@ export function Footer() {
               Студия живых экосистем в стекле. Собираем вручную в Москве и Петербурге.
               Отправляем по всей России.
             </p>
-            <div className="mt-8 inline-flex items-center gap-2 rounded-full border border-bone-100/15 px-4 py-2 text-[11px] uppercase tracking-[0.2em] text-bone-100/70">
-              <ShieldCheck className="h-3.5 w-3.5" />
-              Premium craft warranty
-            </div>
             <div className="mt-8 flex gap-6 text-[11px] uppercase tracking-[0.28em] text-bone-100/55">
               <a href="https://wa.me/78001019957" className="link-underline inline-flex items-center gap-2 hover:text-bone-50">
                 <MessageCircle className="h-3.5 w-3.5" />
@@ -92,7 +88,7 @@ export function Footer() {
               <span key={p}>{p}</span>
             ))}
           </div>
-          <Link to="/" className="hover:text-bone-50">Политика конфиденциальности</Link>
+          <Link to="/privacy" className="hover:text-bone-50">Политика конфиденциальности</Link>
         </div>
       </div>
     </footer>
