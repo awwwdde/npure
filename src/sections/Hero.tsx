@@ -1,20 +1,6 @@
 import { useMemo, useRef } from 'react';
 import { motion } from 'framer-motion';
-import { Leaf, Sparkles, ShieldCheck } from 'lucide-react';
 import videoBg from '../content/npure.mp4';
-/**
- * Cinematic hero with a scroll-driven zoom-out reveal.
- *
- *  scroll 0.00 → 0.45  camera pinned on a macro close-up of moss + flowers
- *  scroll 0.45 → 0.75  cross-fade into a wide shot where the composition
- *                       sits inside a glass florarium
- *  scroll 0.75 → 1.00  copy, hairline index, scroll prompt resolve
- *
- * Two image layers are used rather than a single crop so that both ends of
- * the zoom stay fully sharp. Pink petals drift continuously through the
- * frame to match the cinematic reference.
- */
-
 const PETAL_COUNT = 22;
 
 function Petals() {
