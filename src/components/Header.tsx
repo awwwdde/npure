@@ -2,6 +2,7 @@ import { useState } from 'react';
 import { AnimatePresence, motion, useScroll, useSpring } from 'framer-motion';
 import { NavLink, Link } from 'react-router-dom';
 import { Menu, X } from 'lucide-react';
+import { ThemeToggle } from './ThemeToggle';
 
 const NAV = [
   { to: '/catalog', label: 'Каталог' },
@@ -46,6 +47,7 @@ export function Header() {
         </nav>
 
         <div className="flex items-center gap-5">
+          <ThemeToggle />
           <a
             href="tel:+78001019957"
             className="hidden text-[11px] uppercase tracking-[0.26em] text-bone-100/80 transition-colors hover:text-bone-50 xl:block"
@@ -75,6 +77,9 @@ export function Header() {
             transition={{ duration: 0.35, ease: [0.22, 1, 0.36, 1] }}
           >
             <div className="container-edge card-immersive grid gap-5 border-t border-bone-100/10 bg-ink-900/95 py-8 backdrop-blur-xl">
+              <div className="mb-1 flex justify-end">
+                <ThemeToggle />
+              </div>
               {NAV.map((n, i) => (
                 <motion.div
                   key={n.to}

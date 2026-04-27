@@ -5,23 +5,23 @@ export default {
     extend: {
       colors: {
         ink: {
-          900: '#12110F',
-          800: '#1A1916',
-          700: '#24231F',
-          600: '#302E29',
-          500: '#43413A',
-          400: '#6B6B63',
+          900: 'rgb(var(--ink-900) / <alpha-value>)',
+          800: 'rgb(var(--ink-800) / <alpha-value>)',
+          700: 'rgb(var(--ink-700) / <alpha-value>)',
+          600: 'rgb(var(--ink-600) / <alpha-value>)',
+          500: 'rgb(var(--ink-500) / <alpha-value>)',
+          400: 'rgb(var(--ink-400) / <alpha-value>)',
         },
         bone: {
-          50: '#FBF8F2',
-          100: '#EFE9DD',
-          200: '#D9D2C3',
-          300: '#B5AD9B',
+          50: 'rgb(var(--bone-50) / <alpha-value>)',
+          100: 'rgb(var(--bone-100) / <alpha-value>)',
+          200: 'rgb(var(--bone-200) / <alpha-value>)',
+          300: 'rgb(var(--bone-300) / <alpha-value>)',
         },
         gold: {
-          400: '#D6B97A',
-          500: '#C9A85C',
-          600: '#A88842',
+          400: 'rgb(var(--gold-400) / <alpha-value>)',
+          500: 'rgb(var(--gold-500) / <alpha-value>)',
+          600: 'rgb(var(--gold-600) / <alpha-value>)',
         },
       },
       fontFamily: {
