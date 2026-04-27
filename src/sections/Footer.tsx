@@ -83,11 +83,14 @@ export function Footer() {
 
         <div className="mt-20 flex flex-col items-start justify-between gap-6 border-t border-bone-100/10 pt-8 text-[11px] text-bone-100/45 md:flex-row md:items-center">
           <p>© 2014–2026 Neo Pure. ИНН 7704123456.</p>
-          <div className="flex flex-wrap items-center gap-4 uppercase tracking-[0.25em]">
-            {['Mir', 'Visa', 'MC', 'SBP', 'Apple Pay'].map((p) => (
-              <span key={p}>{p}</span>
-            ))}
-          </div>
+          <a
+            href="https://t.me/awwddedev"
+            target="_blank"
+            rel="noreferrer"
+            className="tracking-[0.25em] text-[11px] border-bone-100/10 transition-colors hover:text-bone-50"
+          >
+            Сделано awwwdde
+          </a>
           <Link to="/privacy" className="hover:text-bone-50">Политика конфиденциальности</Link>
         </div>
       </div>

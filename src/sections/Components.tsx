@@ -11,7 +11,7 @@ const LAYERS = [
 
 export function Components() {
   return (
-    <section className="relative bg-ink-900 py-28 md:py-40">
+    <section className="section-shell">
       <div className="hairline mx-auto w-[calc(100%-3rem)] md:w-[calc(100%-5rem)] lg:w-[calc(100%-8rem)]" />
       <div className="container-edge pt-20">
         <div className="flex flex-wrap items-end justify-between gap-6">

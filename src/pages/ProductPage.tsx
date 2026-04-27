@@ -42,9 +42,9 @@ export default function ProductPage() {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 1, ease: [0.22, 1, 0.36, 1] }}
-            className="relative aspect-[4/5] overflow-hidden bg-ink-800"
+            className="photo-shell aspect-[4/5]"
           >
-            <img src={product.image} alt={product.name} className="h-full w-full object-cover" />
+            <img src={product.image} alt={product.name} className="photo-media" />
           </motion.div>
 
           <div className="flex flex-col justify-between gap-12 lg:pt-12">

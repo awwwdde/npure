@@ -48,7 +48,7 @@ export function Header() {
         <div className="flex items-center gap-5">
           <a
             href="tel:+78001019957"
-            className="hidden text-[11px] uppercase tracking-[0.26em] text-bone-100/80 transition-colors hover:text-bone-50 md:block"
+            className="hidden text-[11px] uppercase tracking-[0.26em] text-bone-100/80 transition-colors hover:text-bone-50 xl:block"
           >
             8 800 101-99-57
           </a>
@@ -74,7 +74,7 @@ export function Header() {
             exit={{ opacity: 0, height: 0 }}
             transition={{ duration: 0.35, ease: [0.22, 1, 0.36, 1] }}
           >
-            <div className="container-edge grid gap-5 border-t border-bone-100/10 bg-ink-900/95 py-8 backdrop-blur-xl">
+            <div className="container-edge card-immersive grid gap-5 border-t border-bone-100/10 bg-ink-900/95 py-8 backdrop-blur-xl">
               {NAV.map((n, i) => (
                 <motion.div
                   key={n.to}

@@ -34,7 +34,7 @@ const STEPS = [
 
 export function Process() {
   return (
-    <section className="relative bg-ink-900 py-28 md:py-40">
+    <section className="section-shell">
       <div className="container-edge">
         <div>
           <span className="micro-label">№ 06 — Заказ</span>
@@ -49,9 +49,10 @@ export function Process() {
               key={s.n}
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
+              whileHover={{ y: -6 }}
               viewport={{ once: true, margin: '-60px' }}
               transition={{ duration: 0.7, delay: i * 0.08 }}
-              className="border-t border-bone-100/10 pt-6"
+              className="pt-4"
             >
               <div className="glass-pill mb-6 inline-flex h-11 w-11 items-center justify-center rounded-full text-bone-50">
                 <s.icon className="h-4.5 w-4.5" />

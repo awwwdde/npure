@@ -1,4 +1,5 @@
-import { motion } from 'framer-motion';
+import { motion, useScroll, useTransform } from 'framer-motion';
+import { useRef } from 'react';
 
 const FACTS = [
   { n: '10+', label: 'лет студии' },
@@ -8,18 +9,28 @@ const FACTS = [
 ];
 
 export function Story() {
+  const sectionRef = useRef<HTMLElement | null>(null);
+  const { scrollYProgress } = useScroll({
+    target: sectionRef,
+    offset: ['start end', 'end start'],
+  });
+  const mediaY = useTransform(scrollYProgress, [0, 1], [28, -28]);
+
   return (
-    <section id="story" className="relative bg-ink-900 py-28 md:py-40">
+    <section ref={sectionRef} id="story" className="section-shell">
       <div className="container-edge grid gap-20 lg:grid-cols-[0.9fr_1.1fr] lg:gap-28">
-        <motion.img
-          initial={{ opacity: 0, y: 30 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true, margin: '-100px' }}
-          transition={{ duration: 1, ease: [0.22, 1, 0.36, 1] }}
-          src="https://images.unsplash.com/photo-1466692476868-aef1dfb1e735?auto=format&fit=crop&w=1600&q=85"
-          alt="Florarium close-up"
-          className="aspect-[4/5] w-full object-cover"
-        />
+        <div className="photo-shell">
+          <motion.img
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true, margin: '-100px' }}
+            transition={{ duration: 1, ease: [0.22, 1, 0.36, 1] }}
+            style={{ y: mediaY }}
+            src="https://images.unsplash.com/photo-1466692476868-aef1dfb1e735?auto=format&fit=crop&w=1600&q=85"
+            alt="Florarium close-up"
+            className="photo-media aspect-[4/5] scale-[1.08]"
+          />
+        </div>
 
         <div className="flex flex-col justify-center">
           <span className="micro-label">№ 01 — Философия</span>

@@ -10,7 +10,7 @@ type Props = {
 
 export function PageHero({ index, eyebrow, title, description }: Props) {
   return (
-    <section className="relative overflow-hidden bg-ink-900 pb-20 pt-40 md:pb-32 md:pt-48">
+    <section className="relative overflow-hidden bg-ink-900 pb-16 pt-36 md:pb-28 md:pt-44">
       <div className="container-edge">
         <div className="flex items-start justify-between gap-6">
           <span className="micro-label">{eyebrow}</span>
@@ -20,7 +20,7 @@ export function PageHero({ index, eyebrow, title, description }: Props) {
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 1, ease: [0.22, 1, 0.36, 1] }}
-          className="display mt-10 text-[52px] text-bone-50 sm:text-[84px] md:text-[120px]"
+          className="display mt-10 max-w-[11ch] text-[44px] text-bone-50 sm:text-[74px] md:text-[106px] lg:text-[124px]"
         >
           {title}
         </motion.h1>
@@ -35,7 +35,7 @@ export function PageHero({ index, eyebrow, title, description }: Props) {
           </motion.p>
         )}
       </div>
-      <div className="hairline mt-20 w-full" />
+      <div className="hairline mt-16 w-full md:mt-20" />
     </section>
   );
 }

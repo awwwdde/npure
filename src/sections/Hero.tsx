@@ -1,5 +1,5 @@
 import { useMemo, useRef } from 'react';
-import { motion } from 'framer-motion';
+import { motion, useScroll, useTransform } from 'framer-motion';
 import videoBg from '../content/npure.mp4';
 const PETAL_COUNT = 22;
 
@@ -40,7 +40,15 @@ function Petals() {
 }
 
 export function Hero() {
+  const sectionRef = useRef<HTMLElement | null>(null);
   const videoRef = useRef<HTMLVideoElement>(null);
+  const { scrollYProgress } = useScroll({
+    target: sectionRef,
+    offset: ['start start', 'end start'],
+  });
+  const videoY = useTransform(scrollYProgress, [0, 1], [0, 120]);
+  const contentY = useTransform(scrollYProgress, [0, 1], [0, -80]);
+  const contentOpacity = useTransform(scrollYProgress, [0, 0.85], [1, 0.45]);
 
   const smoothStopNearEnd = () => {
     const video = videoRef.current;
@@ -64,12 +72,13 @@ export function Hero() {
   };
 
   return (
-    <section className="relative h-[100svh] w-full">
+    <section ref={sectionRef} className="relative h-[100svh] w-full">
       <div className="relative h-[100svh] w-full overflow-hidden bg-ink-900">
         <motion.div
           className="absolute inset-0 cinema"
           initial={{ scale: 1.08, opacity: 0.75 }}
           animate={{ scale: 1, opacity: 1 }}
+          style={{ y: videoY }}
           transition={{ duration: 1.35, ease: [0.22, 1, 0.36, 1] }}
         >
           <video
@@ -124,8 +133,9 @@ export function Hero() {
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.3, duration: 0.85, ease: [0.22, 1, 0.36, 1] }}
         >
-          <div className="flex flex-col gap-10 md:flex-row md:items-end md:justify-between">
-            <h1 className="display max-w-[11ch] text-[56px] text-bone-50 sm:text-[88px] md:text-[128px] lg:text-[152px]">
+          <motion.div style={{ y: contentY, opacity: contentOpacity }}>
+            <div className="flex flex-col gap-10 md:flex-row md:items-end md:justify-between">
+            <h1 className="display max-w-[11ch] text-[50px] text-bone-50 sm:text-[76px] md:text-[108px] lg:text-[132px] xl:text-[152px]">
               Живое<br />
               <span className="italic text-bone-100/85">в&nbsp;стекле.</span>
             </h1>
@@ -141,11 +151,12 @@ export function Hero() {
             </div>
           </div>
 
-          <div className="mt-14 flex items-center gap-6">
-            <span className="micro-label">01 / Intro</span>
-            <div className="hairline flex-1" />
-            <span className="micro-label">Scroll</span>
-          </div>
+            <div className="mt-14 flex items-center gap-6">
+              <span className="micro-label">01 / Intro</span>
+              <div className="hairline flex-1" />
+              <span className="micro-label">Scroll</span>
+            </div>
+          </motion.div>
         </motion.div>
       </div>
     </section>

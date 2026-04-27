@@ -14,7 +14,7 @@ const IMAGES = [
 export function Gallery({ full = false }: { full?: boolean }) {
   const images = full ? [...IMAGES, ...IMAGES] : IMAGES;
   return (
-    <section id="gallery" className="relative bg-ink-900 py-28 md:py-40">
+    <section id="gallery" className="section-shell">
       <div className="container-edge">
         <div className="flex flex-wrap items-end justify-between gap-6">
           <div>
@@ -34,9 +34,10 @@ export function Gallery({ full = false }: { full?: boolean }) {
               key={`${src}-${i}`}
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
+              whileHover={{ y: -4 }}
               viewport={{ once: true, margin: '-60px' }}
               transition={{ duration: 0.8, delay: (i % 8) * 0.05 }}
-              className={`group relative overflow-hidden ${
+              className={`photo-shell group ${
                 i % 5 === 0 ? 'aspect-[3/4] md:col-span-2 md:row-span-2' : 'aspect-[3/4]'
               }`}
             >
@@ -44,7 +45,7 @@ export function Gallery({ full = false }: { full?: boolean }) {
                 src={src}
                 alt=""
                 loading="lazy"
-                className="h-full w-full object-cover transition-transform duration-[1400ms] group-hover:scale-105"
+                className="photo-media group-hover:scale-105"
               />
             </motion.figure>
           ))}

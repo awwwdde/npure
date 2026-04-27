@@ -60,7 +60,7 @@ export function Reviews() {
   const visible = showAll ? filtered : filtered.slice(0, 4);
 
   return (
-    <section id="reviews" className="relative bg-ink-900 py-28 md:py-40">
+    <section id="reviews" className="section-shell">
       <div className="container-edge">
         <div className="flex flex-wrap items-end justify-between gap-8">
           <div>

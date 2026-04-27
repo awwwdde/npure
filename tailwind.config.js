@@ -5,11 +5,11 @@ export default {
     extend: {
       colors: {
         ink: {
-          900: '#0A0A0A',
-          800: '#121210',
-          700: '#1A1A18',
-          600: '#242420',
-          500: '#3A3A35',
+          900: '#12110F',
+          800: '#1A1916',
+          700: '#24231F',
+          600: '#302E29',
+          500: '#43413A',
           400: '#6B6B63',
         },
         bone: {
@@ -25,8 +25,8 @@ export default {
         },
       },
       fontFamily: {
-        display: ['"Cormorant Garamond"', 'Georgia', 'serif'],
-        sans: ['"Inter"', 'system-ui', 'sans-serif'],
+        display: ['"Manrope"', '"Inter"', 'system-ui', 'sans-serif'],
+        sans: ['"Manrope"', '"Inter"', 'system-ui', 'sans-serif'],
       },
       letterSpacing: {
         tightest: '-0.04em',

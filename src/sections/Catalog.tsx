@@ -16,12 +16,12 @@ export function ProductCard({ p }: { p: Product }) {
       transition={{ duration: 0.8, ease: [0.22, 1, 0.36, 1] }}
     >
       <Link to={`/catalog/${p.id}`} className="group block">
-        <div className="relative aspect-[4/5] overflow-hidden bg-ink-800">
+        <div className="photo-shell aspect-[4/5]">
           <img
             src={p.image}
             alt={p.name}
             loading="lazy"
-            className="h-full w-full object-cover transition-transform duration-[1400ms] ease-out group-hover:scale-[1.06]"
+            className="photo-media group-hover:scale-[1.06]"
           />
           {p.badge && (
             <span className="absolute left-5 top-5 bg-bone-50 px-3 py-1 text-[10px] font-medium uppercase tracking-[0.3em] text-ink-900">
@@ -58,7 +58,7 @@ export function Catalog({ compact = false }: { compact?: boolean }) {
   const shown = compact ? list.slice(0, 6) : list;
 
   return (
-    <section id="catalog" className="relative bg-ink-900 py-28 md:py-40">
+    <section id="catalog" className="section-shell">
       <div className="container-edge">
         <div className="flex flex-wrap items-end justify-between gap-8">
           <div>

@@ -24,7 +24,7 @@ const CARDS = [
 
 export function Workshops() {
   return (
-    <section id="workshops" className="relative bg-ink-900 py-28 md:py-40">
+    <section id="workshops" className="section-shell">
       <div className="container-edge">
         <div className="grid gap-10 lg:grid-cols-[1fr_1fr] lg:items-end">
           <div>
@@ -66,16 +66,17 @@ export function Workshops() {
               key={c.title}
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
+              whileHover={{ y: -6 }}
               viewport={{ once: true, margin: '-60px' }}
               transition={{ duration: 0.7, delay: i * 0.08 }}
-              className="border-t border-bone-100/10 pt-8"
+              className="pt-8"
             >
-              <div className="mb-6 aspect-[4/3] overflow-hidden">
+              <div className="photo-shell mb-6 aspect-[4/3]">
                 <img
                   src={c.image}
                   alt={c.title}
                   loading="lazy"
-                  className="h-full w-full object-cover transition-transform duration-[1200ms] hover:scale-105"
+                  className="photo-media hover:scale-105"
                 />
               </div>
               <h3 className="font-display text-3xl text-bone-50">{c.title}</h3>

@@ -20,7 +20,7 @@ export default function AboutPage() {
       />
       <Story />
       <Components />
-      <section className="relative bg-ink-900 py-28 md:py-40">
+      <section className="section-shell">
         <div className="container-edge">
           <span className="micro-label">Команда</span>
           <h2 className="display mt-8 text-4xl text-bone-50 md:text-6xl">Кто делает.</h2>
@@ -33,8 +33,8 @@ export default function AboutPage() {
                 viewport={{ once: true, margin: '-80px' }}
                 transition={{ duration: 0.8, delay: i * 0.08 }}
               >
-                <div className="aspect-[4/5] overflow-hidden bg-ink-800">
-                  <img src={p.img} alt={p.name} className="h-full w-full object-cover grayscale" />
+                <div className="photo-shell aspect-[4/5]">
+                  <img src={p.img} alt={p.name} className="photo-media grayscale" />
                 </div>
                 <div className="mt-6 font-display text-2xl text-bone-50">{p.name}</div>
                 <div className="mt-1 text-[12px] uppercase tracking-[0.22em] text-bone-100/55">

@@ -19,7 +19,7 @@ const STUDIOS = [
 
 export function Contacts() {
   return (
-    <section id="contacts" className="relative bg-ink-900 py-28 md:py-40">
+    <section id="contacts" className="section-shell">
       <div className="container-edge">
         <div className="flex flex-wrap items-end justify-between gap-6">
           <div>
@@ -44,11 +44,11 @@ export function Contacts() {
               transition={{ duration: 0.8, delay: i * 0.1 }}
               className="group"
             >
-              <div className="relative aspect-[4/3] overflow-hidden">
+              <div className="photo-shell aspect-[4/3]">
                 <img
                   src={s.image}
                   alt={s.city}
-                  className="h-full w-full object-cover transition-transform duration-[1400ms] group-hover:scale-[1.04]"
+                  className="photo-media group-hover:scale-[1.04]"
                 />
               </div>
               <div className="mt-8 grid grid-cols-2 gap-4">

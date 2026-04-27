@@ -34,7 +34,7 @@ export function FAQ() {
   const [open, setOpen] = useState<number | null>(0);
 
   return (
-    <section className="relative bg-ink-900 py-28 md:py-40">
+    <section className="section-shell">
       <div className="container-edge grid gap-16 lg:grid-cols-[0.8fr_1.2fr]">
         <div>
           <span className="micro-label">№ 07 — FAQ</span>
@@ -48,9 +48,9 @@ export function FAQ() {
             transition={{ duration: 0.8 }}
             className="mt-10 space-y-4"
           >
-            <div className="relative aspect-[4/3] overflow-hidden">
+            <div className="photo-shell aspect-[4/3]">
               <video
-                className="h-full w-full object-cover"
+                className="photo-media"
                 src={videoBg}
                 autoPlay
                 muted
@@ -61,18 +61,22 @@ export function FAQ() {
               <div className="pointer-events-none absolute inset-0 bg-gradient-to-t from-ink-900/50 via-transparent to-transparent" />
             </div>
             <div className="grid grid-cols-2 gap-4">
-              <img
-                src="https://images.unsplash.com/photo-1485955900006-10f4d324d411?auto=format&fit=crop&w=1000&q=85"
-                alt="Флорариум в интерьере"
-                loading="lazy"
-                className="aspect-[4/5] w-full object-cover"
-              />
-              <img
-                src="https://images.unsplash.com/photo-1459411552884-841db9b3cc2a?auto=format&fit=crop&w=1000&q=85"
-                alt="Детали композиции"
-                loading="lazy"
-                className="aspect-[4/5] w-full object-cover"
-              />
+              <div className="photo-shell aspect-[4/5]">
+                <img
+                  src="https://images.unsplash.com/photo-1485955900006-10f4d324d411?auto=format&fit=crop&w=1000&q=85"
+                  alt="Флорариум в интерьере"
+                  loading="lazy"
+                  className="photo-media"
+                />
+              </div>
+              <div className="photo-shell aspect-[4/5]">
+                <img
+                  src="https://images.unsplash.com/photo-1459411552884-841db9b3cc2a?auto=format&fit=crop&w=1000&q=85"
+                  alt="Детали композиции"
+                  loading="lazy"
+                  className="photo-media"
+                />
+              </div>
             </div>
           </motion.div>
         </div>
